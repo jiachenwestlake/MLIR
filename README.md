@@ -1,7 +1,7 @@
 # MLIR
 ## Code for the paper "Meta-learning the Invariant Representation for Domain Generalization"
 
-This repository is a fork of the [DomainBed](https://github.com/facebookresearch/DomainBed)
+This repository is a fork of the [DomainBed](https://github.com/facebookresearch/DomainBed).
 
 ### Requirements
 ```
@@ -28,7 +28,7 @@ python scripts/train.py \
 
 **Launch a sweep:**
 
-the entire sweep trains many models (3 independent trials x 20 random hyper-parameter choices).
+The entire sweep trains many models (3 independent trials x 20 random hyper-parameter choices).
 ```
 python scripts/sweep.PY launch \
        --data_dir=data/PACS/ \
