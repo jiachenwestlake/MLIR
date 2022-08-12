@@ -1,13 +1,13 @@
 # MLIR
 ## Code for the paper "Mate-learning the Invariant Representation for Domain Generalization"
 
-This repository is a fork of the [DomainBed] (https://github.com/facebookresearch/DomainBed)
+This repository is a fork of the [DomainBed](https://github.com/facebookresearch/DomainBed)
 
 ### Requirements
 ```
 python>=3.7 
 torch>=1.8.1
-torchvision>=0.9.1
+torchvision
 ```
 ### Datasets
 ```
