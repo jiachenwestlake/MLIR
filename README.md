@@ -30,7 +30,7 @@ python scripts/train.py \
 
 The entire sweep trains many models (3 independent trials x 20 random hyper-parameter choices).
 ```
-python scripts/sweep.PY launch \
+python scripts/sweep.py launch \
        --data_dir=data/PACS/ \
        --output_dir=train_output/ \
        --command_launcher MyLauncher \
