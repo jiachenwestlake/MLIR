@@ -9,7 +9,7 @@ python>=3.7
 torch>=1.8.1
 torchvision
 ```
-### Datasets
+### Dataset Download
 ```
 python scripts/download.py \
        --data_dir=data
