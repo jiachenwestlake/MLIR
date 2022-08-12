@@ -489,7 +489,7 @@ class DOML(Algorithm):
 
         self.gen_opt = torch.optim.Adam(
             self.featurizer.parameters(),
-            lr=self.hparams["lr_g"],
+            lr=self.hparams["lr_g"]*self.hparams["advfactor_gamma"],
             weight_decay=self.hparams['weight_decay_g'],
             betas=(self.hparams['beta1'], 0.9)
         )
@@ -570,7 +570,7 @@ class DOML(Algorithm):
             clone_featurizer = copy.deepcopy(self.featurizer)
             clone_gen_opt = torch.optim.Adam(
                 clone_featurizer.parameters(),
-                lr=self.hparams["lr_g_in"],
+                lr=self.hparams["lr_g"]*self.hparams["advfactor_alpha"],
                 weight_decay=self.hparams['weight_decay_g'],
                 betas=(self.hparams['beta1'], 0.9)
             )

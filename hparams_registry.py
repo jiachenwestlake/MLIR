@@ -128,24 +128,21 @@ def _hparams(algorithm, dataset, random_seed):
     elif algorithm in ['DANN', 'CDANN']:
         _hparam('lr_g', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
     ## DOML
-    if algorithm in ['DOML'] and dataset in SMALL_IMAGES:
-        _hparam('lr_g', 1e-3, lambda r: 10**r.uniform(-4.5, -2.5))
-        _hparam('lr_g_in', 2e-3, lambda r: 10**r.uniform(-4.5, -2.5))
-        _hparam('lr_g_test', 1e-3, lambda r: 10**r.uniform(-4.5, -2.5))
-    elif algorithm in ['DOML']:
-        _hparam('lr_g', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
-        _hparam('lr_g_in', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
+    if algorithm in ['DOML']:
+        _hparam('advfactor_alpha', 1.0., lambda r: 10**r.uniform(-1, 1))
+        _hparam('advfactor_gamma', 1.0., lambda r: 10**r.uniform(-1, 1))
+        if dataset in SMALL_IMAGES:
+            _hparam('lr_g', 1e-3, lambda r: 10**r.uniform(-4.5, -2.5))
+            _hparam('lr_d', 1e-3, lambda r: 10**r.uniform(-4.5, -2.5))
+        else:
+            _hparam('lr_g', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
+            _hparam('lr_d', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
 
     if algorithm in ['DANN', 'CDANN'] and dataset in SMALL_IMAGES:
         _hparam('lr_d', 1e-3, lambda r: 10**r.uniform(-4.5, -2.5))
     elif algorithm in ['DANN', 'CDANN']:
         _hparam('lr_d', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
-    ## DOML
-    if algorithm in ['DOML'] and dataset in SMALL_IMAGES:
-        _hparam('lr_d', 1e-4, lambda r: 10**r.uniform(-4.5, -2.5))
-    elif algorithm in ['DOML']:
-        _hparam('lr_d', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
-        _hparam('lr_d', 5e-5, lambda r: 10**r.uniform(-5, -3.5))
+
 
     if algorithm in ['DANN', 'CDANN'] and dataset in SMALL_IMAGES:
         _hparam('weight_decay_g', 0., lambda r: 0.)

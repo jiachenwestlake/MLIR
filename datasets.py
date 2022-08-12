@@ -46,7 +46,7 @@ def num_environments(dataset_name):
 
 class MultipleDomainDataset:
     N_STEPS = 5001           # Default, subclasses may override
-    N_STEPS_META_TEST = 100  # DOML meta-test steps
+    N_STEPS_META_TEST = 15   # DOML meta-test steps # Choise from {5,10,15}
     CHECKPOINT_FREQ = 100    # Default, subclasses may override
     N_WORKERS = 8            # Default, subclasses may override
     ENVIRONMENTS = None      # Subclasses should override
