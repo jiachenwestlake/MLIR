@@ -1,5 +1,5 @@
 # MLIR
-## Code for the paper "Meta-learning the Invariant Representation for Domain Generalization"
+## Code for the paper "Meta-learning the Invariant Representation for Domain Generalization".
 
 This repository is a fork of the [DomainBed](https://github.com/facebookresearch/DomainBed).
 
