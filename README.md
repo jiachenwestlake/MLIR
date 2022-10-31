@@ -46,3 +46,16 @@ python scripts/collect_results.py \
        --input_dir=train_output/ \
 ```
 
+## Cite:
+If you use our code, please cite our paper as follows:
+```
+@article{jia2022-meta,
+    title = "Meta-learning the invariant representation for domain generalization",
+    author = "Jia, Chen  and  Zhang, Yue",
+    journal = "Machine learning",
+    year = "2022",
+    publisher = "Springer Nature",
+    eprint = "https://link.springer.com/content/pdf/10.1007/s10994-022-06256-y.pdf",
+    pages = "1--21"
+}
+```
